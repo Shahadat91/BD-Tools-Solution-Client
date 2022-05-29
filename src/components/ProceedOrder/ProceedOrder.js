@@ -17,6 +17,7 @@ const ProceedOrder = () => {
             email: user.email,
             name: tool.name,
             toolId: toolId,
+            quantity: event.target.quantity.value,
             address: event.target.address.value,
             phone: event.target.phone.value,
 
@@ -39,12 +40,14 @@ const ProceedOrder = () => {
         <div className='justify-center items-center text-center'>
             <h2>Proceed Your Order</h2>
             <h2>Please Order: {tool.name}</h2>
-            <form className='justify-center items-center text-center' onSubmit={handleProceedOrder}>
+            <form className='w-50 mx-auto text-center' onSubmit={handleProceedOrder}>
                 <input className='mb-3 w-100' type="text" name="name" id="" value={user?.displayName} placeholder='name' required readOnly disabled />
                 <br />
                 <input className='mb-3 w-100' type="email" name="email" id="" value={user?.email} placeholder='email' required readOnly disabled />
                 <br />
                 <input className='mb-3 w-100' type="text" name="tool" value={tool.name} id="" placeholder='tool' required readOnly disabled />
+                <br />
+                <input className='mb-3 w-100' type="text" name="quantity" id="" placeholder='quantity' autoComplete='off' required />
                 <br />
                 <input className='mb-3 w-100' type="text" name="address" id="" placeholder='address' autoComplete='off' required />
                 <br />
