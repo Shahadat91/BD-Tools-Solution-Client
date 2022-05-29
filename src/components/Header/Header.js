@@ -35,10 +35,10 @@ const logout =()=>{
     </>
   );
   return (
-    <div className="navbar">
+    <div className="navbar bg-gray-600">
       <div className="navbar-start">
         <div className="dropdown">
-          <label tabIndex="0" className="btn btn-ghost lg:hidden">
+          <label tabIndex="0" className="btn btn-danger lg:hidden">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-5 w-5"
@@ -61,9 +61,9 @@ const logout =()=>{
             {menuItems}
           </ul>
         </div>
-        <a href="#" className="btn btn-ghost normal-case text-xl">
+        <Link to={'/'} className="btn btn-ghost normal-case text-xl">
           BD Tools Solution
-        </a>
+        </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal p-0">{menuItems}</ul>
