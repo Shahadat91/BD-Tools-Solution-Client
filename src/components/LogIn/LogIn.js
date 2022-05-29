@@ -93,7 +93,7 @@ const LogIn = () => {
             <p>
               New at this site? Please{" "}
               <span className="link-a" onClick={navigateRegister}>
-                SignUp
+                Register
               </span>
             </p>
             <p>
