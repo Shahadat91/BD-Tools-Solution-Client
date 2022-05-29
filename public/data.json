@@ -1,0 +1,80 @@
+[
+  {
+    "_id": "6282729e91d453103b4531b4",
+    "price": 87,
+    "img": "https://i.ibb.co/80rvLv6/wrench-01.jpg",
+    "minQuantity": 40,
+    "availableQuantity": 456,
+    "color": "Silver",
+    "name": "CRAFTSMAN Adjustable Wrench",
+    "material": "Chrome Vanadium Steel",
+    "weight": "167 grams",
+    "dimensions": "3.5 x 1.90 x 0.52 inches",
+    "description": "  Wide opening jaws of this wrench are designed for added versatility.  Adjustable wrench has a chrome finish for corrosion resistance.CRAFTSMAN tools come with Metric and SAE Scale for easy gauging of work piece size "
+  },
+  {
+    "_id": "628274d3f7424dd2456a0be5",
+    "price": 68,
+    "img": "https://i.ibb.co/XyCy2fC/wrench-02.jpg",
+    "minQuantity": 32,
+    "availableQuantity": 387,
+    "color": "Black/Silver",
+    "name": "Slim Jaw Adjustable Wrench",
+    "material": "Alloy Steel",
+    "weight": "117 grams",
+    "dimensions": "4.5 x 1.80 x 0.42 inches",
+    "description": "4.5 inch slim jaw adjustable wrench with inch/metric measurement scale. Ideal for auto repair, general assembly, maintenance, plumbing, and more. Drop-forged, heat-treated Cr-V steel construction with corrosion-resistant finish"
+  },
+  {
+    "_id": "628274d3047d1a01ba819a06",
+    "price": 65,
+    "img": "https://i.ibb.co/9YLZsnT/wrench-03.jpg",
+    "minQuantity": 62,
+    "availableQuantity": 503,
+    "color": "Black",
+    "name": "Proferred Plumbing Adjustable Wrench",
+    "material": "Salam Steel",
+    "weight": "197 grams",
+    "specialFeature": "8 x 1.97 x 1.97 inches",
+    "description": "JAW CAPACITY - 55% wider jaw opening than traditional wrenches, opens to 1.5. SUPER THIN - Head is super thin allowing for use in limited and narrow spaces. JAW DEPTH - Deep throat, height of jaw is 30% higher than standard wrenches. COVERAGE - Ideal for use in Plumbing, Automotive, Installation and Gas fitting industries. "
+  },
+  {
+    "_id": "628274d3bba0907932b493a1",
+    "price": 98,
+    "img": "https://i.ibb.co/x33K4KS/wrench-04.jpg",
+    "minQuantity": 30,
+    "availableQuantity": 451,
+    "color": "Yellow/Navy Blue",
+    "name": "Wide-Mouth Adjustable HAMMERHEAD Wrench",
+    "material": "BSRM Steel",
+    "weight": "318 grams",
+    "dimensions": "7.1 x 3.7 x 1.6 inches",
+    "description": " HAMMERHEAD hammer face allows for pounding of nails and fasteners. Features SAE and Metric measurements on wrench mouth & jaw opening (0-1”, 0-25mm) for quick, accurate & precise size adjustments."
+  },
+  {
+    "_id": "628274d38e6c4f61a47f3a9c",
+    "price": 97,
+    "img": "https://i.ibb.co/jVjR33v/wrench-05.jpg",
+    "minQuantity": 35,
+    "availableQuantity": 452,
+    "color": "Black",
+    "name": "Adjustable Spanner Wrench",
+    "material": "RSRM Steel",
+    "weight": "217 grams",
+    "dimensions": "5.91 x 5.91 x 5.91 inches",
+    "description": "ISO 6787, jaw set at 15°. Swedish pattern, roller with left hand thread. The closest attention is paid to every single detail of every single GEDORE tool: qualified staff, intelligent construction, first-class materials and modern production methods."
+  },
+  {
+    "_id": "628274d3662b82575478cb6f",
+    "price": 87,
+    "img": "https://i.ibb.co/MRf9mbX/wrench-06.jpg",
+    "minQuantity": 21,
+    "availableQuantity": 325,
+    "color": "Red/Silver",
+    "name": "Adjustable Wrench Spanner - 10 Inch",
+    "material": "SSRM Steel",
+    "weight": "289 grams",
+    "dimensions": "10.71 x 3.19 x 1.1 inches ",
+    "description": " Ergonomically designed to provide a firm grip and tighten or loosen fasteners, this wrench is ideal for automotive repairs, plumbing, and other general assembly tasks. The automotive spanner wrench has an adjustable opening design that makes it suitable for various nuts."
+  }
+]

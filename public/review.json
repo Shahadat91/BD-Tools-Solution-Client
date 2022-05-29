@@ -1,0 +1,23 @@
+[
+    {
+      "id": "624ad146c5fcf7288a00d7a6",
+      "img": "./Images/Ellipse-1.png",
+      "name": "Pena Jensen",
+      "rating": 5,
+      "review": "Having wanted a Rolex since I was a teenager, I found a used one an got an elderly watchmaker to teach me how to service it completely. The quality is outstanding, inside and out. The case design, to protect the mechanism, is insuperable. The mechanism is built like a tank, built to last a lifetime, though it needs to be serviced every 5 years."
+    },
+    {
+      "id": "624ad146082fed17f4845675",
+      "img": "./Images/Ellipse-2.png",
+      "name": "Walter Atkins",
+      "rating": 2,
+      "review": "For this kind of money I expected the dam watch to keep a correct time. This thing is always 10 min behind?!!! I took it in for warranty repair 3 times already for the same issue. If it was a car, under lemon law, I would have my money back by now."
+    },
+    {
+      "id": "624ad1468bfa68d2cabf1292",
+      "img": "./Images/Ellipse-3.png",
+      "name": "Celeste Farley",
+      "rating": 3,
+      "review": "This was my first high end watch. I actually bought this one in NYC at an unauthorized dealer. Yes I know. But i verified the Ser# and had it inspected after the purchase. Was able to get this for $3500 out the door. I wore this watch daily until I got into rare/high end Seiko watches."
+    }
+  ]

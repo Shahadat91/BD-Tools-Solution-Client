@@ -6,13 +6,16 @@ import {getAuth} from "firebase/auth";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: process.env.RECT_APP_API_KEY,
-  authDomain: process.env.RECT_APP_AUTH_DOMAIN,
-  projectId: process.env.RECT_APP_APP_ID,
-  storageBucket: process.env.RECT_APP_PROJECT_ID,
-  appId: process.env.RECT_APP_STORAGE_BUCKET,
-  messagingSenderId: process.env.RECT_APP_MESSAGING_SENDER_ID,
+
+  apiKey: "AIzaSyAFGQ6XFmmPh0N4hImF6-A0R8KyTd5zR1U",
+  authDomain: "bd-tools-solution.firebaseapp.com",
+  projectId: "bd-tools-solution",
+  storageBucket: "bd-tools-solution.appspot.com",
+  messagingSenderId: "1053276500611",
+  appId: "1:1053276500611:web:bad59d6e03ced9b48d61b6"
+
 };
+
 
 
 // Initialize Firebase
