@@ -80,7 +80,7 @@ const Register = () => {
             required
           />
         </div>
-        <button className="button">Sign Up</button>
+        <button className="button">Register</button>
         <div className="link">
           <p>
             Already have an account? Please{" "}
