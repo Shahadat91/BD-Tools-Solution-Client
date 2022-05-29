@@ -22,7 +22,7 @@ const LogIn = () => {
 
   const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
 
-  const handleSignIn = async(event) => {
+  const handleLogIn = async(event) => {
     event.preventDefault();
     const email = emailRef.current.value;
     const password = passwordRef.current.value;
@@ -63,7 +63,7 @@ const LogIn = () => {
   };
   return (
     <div style={{ marginTop: "60px" }}>
-      <form className="form-body" onSubmit={handleSignIn}>
+      <form className="form-body" onSubmit={handleLogIn}>
         <div className="login-form">
           <div className="title">Please Sign In</div>
 
