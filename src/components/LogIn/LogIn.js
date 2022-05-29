@@ -47,9 +47,9 @@ const LogIn = () => {
     errorElement = <p className="text-danger text-center">Error: {error.message}</p>;
   }
 
-  const navigateSignUp = (event) => {
-    navigate("/signup");
-    console.log("signup");
+  const navigateRegister = (event) => {
+    navigate("/register");
+    
   };
 
   const resetPassword = async () => {
@@ -65,7 +65,7 @@ const LogIn = () => {
     <div style={{ marginTop: "60px" }}>
       <form className="form-body" onSubmit={handleLogIn}>
         <div className="login-form">
-          <div className="title">Please Sign In</div>
+          <div className="title">Please Log In</div>
 
           <div className="input-fields">
             <input
@@ -92,7 +92,7 @@ const LogIn = () => {
           <div className="link">
             <p>
               New at this site? Please{" "}
-              <span className="link-a" onClick={navigateSignUp}>
+              <span className="link-a" onClick={navigateRegister}>
                 SignUp
               </span>
             </p>

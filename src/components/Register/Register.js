@@ -18,7 +18,7 @@ const Register = () => {
     ] = useCreateUserWithEmailAndPassword(auth, {sendEmailVerification: true});
     const [updateProfile, updating, upateError] = useUpdateProfile(auth);
   
-    const handleSignUp = async (event) => {
+    const handleRegister = async (event) => {
       event.preventDefault();
       const name = nameRef.current.value
       const email = emailRef.current.value;
@@ -38,14 +38,14 @@ const Register = () => {
       return <Loading></Loading>
   }
   
-    const navigateSignIn = () => {
+    const navigateLogIn = () => {
       navigate("/login");
       
     };
 
   return (
     <div style={{ marginTop: "60px" }}>
-    <form  className="form-body" onSubmit={handleSignUp}>
+    <form  className="form-body" onSubmit={handleRegister}>
       <div className="login-form">
         <div className="title">Please Register</div>
 
@@ -83,7 +83,7 @@ const Register = () => {
         <div className="link">
           <p>
             Already have an account? Please{" "}
-            <span className="link-a" onClick={navigateSignIn}>
+            <span className="link-a" onClick={navigateLogIn}>
               Log In
             </span>
           </p>
