@@ -1,144 +1,113 @@
-import React, { useEffect } from "react";
+import React, { useRef } from "react";
 import {
+  useSendPasswordResetEmail,
   useSignInWithEmailAndPassword,
-  useSignInWithGoogle,
 } from "react-firebase-hooks/auth";
+import './LogIn.css';
+import { useLocation, useNavigate } from "react-router-dom";
 import auth from "../../firebase.init";
-import { useForm } from "react-hook-form";
-import { Link, useNavigate, useLocation } from "react-router-dom";
 import Loading from "../Loading/Loading";
+import {toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import axios from "axios";
 
 const LogIn = () => {
-  const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
-  const {
-    register,
-    formState: { errors },
-    handleSubmit,
-  } = useForm();
-  const [signInWithEmailAndPassword, user, loading, error] =
-    useSignInWithEmailAndPassword(auth);
-
-  let signInError;
+  const emailRef = useRef("");
+  const passwordRef = useRef("");
   const navigate = useNavigate();
   const location = useLocation();
   let from = location.state?.from?.pathname || "/";
+  const [signInWithEmailAndPassword, user, loading, error] =
+    useSignInWithEmailAndPassword(auth);
 
-  useEffect(() => {
-    if (user || gUser) {
-      navigate(from, { replace: true });
-    }
-  }, [user, gUser, from, navigate]);
+  const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
 
-  if (loading || gLoading) {
+  const handleSignIn = async(event) => {
+    event.preventDefault();
+    const email = emailRef.current.value;
+    const password = passwordRef.current.value;
+    //console.log(email, password);
+    await signInWithEmailAndPassword(email, password);
+    const {data} = await axios.post('https://pacific-sea-12697.herokuapp.com/signin', {email});
+    //console.log(data);
+    localStorage.setItem('accessToken', data.accessToken);
+    navigate(from, { replace: true });
+  };
+
+  if (user) {
+    //navigate(from, { replace: true });
+  }
+
+  if (loading) {
     return <Loading></Loading>;
   }
 
-  if (error || gError) {
-    signInError = (
-      <p className="text-red-500">
-        <small>{error?.message || gError?.message}</small>
-      </p>
-    );
+  let errorElement;
+  if (error) {
+    errorElement = <p className="text-danger text-center">Error: {error.message}</p>;
   }
 
-  const onSubmit = (data) => {
-    signInWithEmailAndPassword(data.email, data.password);
+  const navigateSignUp = (event) => {
+    navigate("/signup");
+    console.log("signup");
+  };
+
+  const resetPassword = async () => {
+    const email = emailRef.current.value;
+    if (email) {
+      await sendPasswordResetEmail(email);
+      toast("Sent email for reset password");
+    } else {
+      toast("please input your email to reset password");
+    }
   };
   return (
-    <div className="flex h-screen justify-center items-center">
-      <div className="card w-96 shadow-xl">
-        <div className="card-body">
-          <h2 className="text-center text-2xl font-bold">Login</h2>
-          <form onSubmit={handleSubmit(onSubmit)}>
-            <div className="form-control w-full max-w-xs">
-              <label className="label">
-                <span className="label-text">Email</span>
-              </label>
-              <input
-                type="email"
-                placeholder="Your Email"
-                className="input input-bordered w-full max-w-xs"
-                {...register("email", {
-                  required: {
-                    value: true,
-                    message: "Email is Required",
-                  },
-                  pattern: {
-                    value: /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/,
-                    message: "Provide a valid Email",
-                  },
-                })}
-              />
-              <label className="label">
-                {errors.email?.type === "required" && (
-                  <span className="label-text-alt text-red-500">
-                    {errors.email.message}
-                  </span>
-                )}
-                {errors.email?.type === "pattern" && (
-                  <span className="label-text-alt text-red-500">
-                    {errors.email.message}
-                  </span>
-                )}
-              </label>
-            </div>
-            <div className="form-control w-full max-w-xs">
-              <label className="label">
-                <span className="label-text">Password</span>
-              </label>
-              <input
-                type="password"
-                placeholder="Password"
-                className="input input-bordered w-full max-w-xs"
-                {...register("password", {
-                  required: {
-                    value: true,
-                    message: "Password is Required",
-                  },
-                  minLength: {
-                    value: 6,
-                    message: "Must be 6 characters or longer",
-                  },
-                })}
-              />
-              <label className="label">
-                {errors.password?.type === "required" && (
-                  <span className="label-text-alt text-red-500">
-                    {errors.password.message}
-                  </span>
-                )}
-                {errors.password?.type === "minLength" && (
-                  <span className="label-text-alt text-red-500">
-                    {errors.password.message}
-                  </span>
-                )}
-              </label>
-            </div>
+    <div style={{ marginTop: "60px" }}>
+      <form className="form-body" onSubmit={handleSignIn}>
+        <div className="login-form">
+          <div className="title">Please Sign In</div>
 
-            {signInError}
+          <div className="input-fields">
             <input
-              className="btn w-full max-w-xs text-white"
-              type="submit"
-              value="Login"
+              className="user-email"
+              ref={emailRef}
+              type="email"
+              name="email"
+              id=""
+              placeholder="your email"
+              required
             />
-          </form>
-          <p>
-            <small>
-              New to Doctors Portal{" "}
-              <Link className="text-primary" to="/register">
-                Create New Account
-              </Link>
-            </small>
-          </p>
-          <div className="divider">OR</div>
-          <button
-            onClick={() => signInWithGoogle()}
-            className="btn btn-outline"
-          >
-            Continue with Google
-          </button>
+
+            <input
+              className="password"
+              ref={passwordRef}
+              type="password"
+              name="password"
+              id=""
+              placeholder="password"
+              required
+            />
+          </div>
+          <button className="button">Sign In</button>
+          <div className="link">
+            <p>
+              New at this site? Please{" "}
+              <span className="link-a" onClick={navigateSignUp}>
+                SignUp
+              </span>
+            </p>
+            <p>
+              Forgot Password?{" "}
+              <span onClick={resetPassword} className="link-a">
+                Reset Password
+              </span>
+            </p>
+          </div>
         </div>
-      </div>
+      </form>
+      {errorElement}
+      
+      
     </div>
   );
 };

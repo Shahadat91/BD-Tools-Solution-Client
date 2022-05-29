@@ -1,0 +1,75 @@
+
+.form-body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #555;
+    background-color: #ecf0f3;
+    margin-bottom: 20px;
+}
+.login-form{
+    width: 300px;
+    height: 500px;
+    background-color: #ecf0f3;
+    border-radius: 20px;
+    padding: 40px 35px 35px 35px;
+    box-shadow: 10px 10px 15px #cbced1,
+                -10px -10px 15px white;
+}
+
+.title{
+    text-align: center;
+    text-transform: uppercase;
+    font-family: Verdana;
+    font-size: 20px;
+    letter-spacing: .1em;
+}
+.input-fields{
+    width: 100%;
+    padding: 30px 5px 5px 5px;
+}
+.input-fields input{
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background: none;
+    color: #555;
+    padding: 10px 15px 15px 20px;
+}
+.user-name, .user-email, .password{
+    margin-bottom: 25px;
+    border-radius: 15px;
+    box-shadow: inset 8px 8px 15px #a7aaa7,
+    inset -8px -8px 15px white;
+}
+
+.button{
+    font-size: 18px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    height: 50px;
+    border-radius: 15px;
+    background: #4ae254;
+    box-shadow: 3px 3px 8px #cbced1,
+    -3px -3px 3px white;
+    color: #fff;
+    transition: .3s linear;
+}
+.button:hover{
+    background: #0ebd1a;
+}
+.button:active{
+    background: yellowgreen;
+}
+.link{
+    padding-top: 15px;
+    text-align: center;
+}
+.link-a{
+    text-decoration: none;
+    color: slateblue;
+    font-family: verdana;
+    cursor: pointer;
+}
