@@ -85,7 +85,7 @@ const Register = () => {
           <p>
             Already have an account? Please{" "}
             <span className="link-a" onClick={navigateSignIn}>
-              Sign In
+              Log In
             </span>
           </p>
         </div>
