@@ -4,12 +4,12 @@ import about_us from "../../Images/Img/about-us.webp";
 const AboutUs = () => {
   return (
     <div>
-      <h1 class="text-5xl text-center font-bold pt-8">About Us</h1>
-      <div class="hero py-6">
-        <div class="hero-content flex-col lg:flex-row">
+      <h1 className="text-5xl text-center font-bold pt-8">About Us</h1>
+      <div className="hero py-6">
+        <div className="hero-content flex-col lg:flex-row">
           <img style={{ width: "510px" }} src={about_us} alt="about_us" />
           <div>
-            <p class="px-6">
+            <p className="px-6">
               Ozar Tools, the global tool brand from the house of Alok
               International Pvt. Ltd., is a world-renowned high-quality In house
               Tools manufacturing company in India. It’s an ISO 9001:2015

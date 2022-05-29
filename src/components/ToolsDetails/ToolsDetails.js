@@ -16,12 +16,12 @@ const ToolsDetails = () => {
       <h2 className="text-center w-full py-4">
         This is Purchase Tools Page. Any One Can Purchase Here.
       </h2>
-      <div class="card w-80 shadow-xl">
-        <figure class="px-10 pt-10">
-          <img className="w-32" src={tool.img} alt="img" class="rounded-xl" />
+      <div className="card w-80 shadow-xl">
+        <figure className="px-10 pt-10">
+          <img className="w-32" src={tool.img} alt="img" className="rounded-xl" />
         </figure>
-        <div class="card-body">
-          <h2 class="card-title">{tool.name}</h2>
+        <div className="card-body">
+          <h2 className="card-title">{tool.name}</h2>
           <p>{tool.description} </p>
           <small>Price: ${tool.price}</small>
           <small>Min Quantity: {tool.minQuantity}pcs</small>
@@ -40,7 +40,7 @@ const ToolsDetails = () => {
           <input type="text" name="" value={tool.minQuantity} id="" />
           <label htmlFor="">Available Quantity</label>
           <input type="text" name="" value={tool.maxQuantity} id="" /> */}
-          <div class="card-actions">
+          <div className="card-actions">
             {/* {
               "is true: " +  (userInput<tool.minQuantity) + ' - ' + (userInput > tool.maxQuantity)
             }
@@ -49,7 +49,7 @@ const ToolsDetails = () => {
 
             {userInput < tool.minQuantity ||
             userInput > tool.availableQuantity ? (
-              <button class="btn btn-error disabled">Proceed Order</button>
+              <button className="btn btn-error disabled">Proceed Order</button>
             ) : (
               <Link className="btn btn-primary" to={`/proceedorder/${toolId}`}>
                 Proceed Order

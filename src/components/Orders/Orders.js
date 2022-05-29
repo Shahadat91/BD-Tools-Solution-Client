@@ -44,13 +44,13 @@ const Orders = () => {
       <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-4'>
         {orders?.map((order) => (
         <div key={order._id}>
-          <div class="card w-96 shadow-xl">
-            <div class="card-body">
-              <h2 class="card-title">Item Name: {order.name}</h2>
+          <div className="card w-96 shadow-xl">
+            <div className="card-body">
+              <h2 className="card-title">Item Name: {order.name}</h2>
               <p>Email: {order.email}</p>
               <p>Quantity: {order.quantity}pcs</p>
-              <div class="card-actions justify-center">
-                <button onClick={() => handleCencelOrder(order._id)} class="btn btn-primary">Cencel</button>
+              <div className="card-actions justify-center">
+                <button onClick={() => handleCencelOrder(order._id)} className="btn btn-primary">Cencel</button>
               </div>
             </div>
           </div>

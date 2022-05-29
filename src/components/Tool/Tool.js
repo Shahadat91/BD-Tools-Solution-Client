@@ -8,16 +8,16 @@ const Tool = ({tool}) => {
         navigate(`/tool/${id}`);
     }
     return (
-        <div class="card shadow-xl">
-        <figure class="px-10 pt-10">
+        <div className="card shadow-xl">
+        <figure className="px-10 pt-10">
           <img className='w-36 rounded-xl' src={img} alt="img"/>
         </figure>
-        <div class="card-body items-center text-center">
-          <h2 class="card-title">{name}</h2>
+        <div className="card-body items-center text-center">
+          <h2 className="card-title">{name}</h2>
           <p>{description}</p>
           <p>Price: {price}</p>
-          <div class="card-actions">
-            <button onClick={() =>navigateToPurchaseTool(_id)} class="btn btn-primary">Buy Now</button>
+          <div className="card-actions">
+            <button onClick={() =>navigateToPurchaseTool(_id)} className="btn btn-primary">Buy Now</button>
           </div>
         </div>
       </div>
