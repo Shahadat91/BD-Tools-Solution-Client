@@ -1,41 +1,41 @@
-import axios from "axios";
-import { signOut } from "firebase/auth";
 import React, { useEffect, useState } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
-import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
+
 import auth from "../../firebase.init";
 
 const Orders = () => {
   const [user] = useAuthState(auth);
   const [orders, setOrders] = useState([]);
-  const navigate = useNavigate();
+  
 
-  const getOrder = async () => {
-    const email = user?.email;
-    const url = `https://fathomless-spire-40584.herokuapp.com/order?email=${email}`;
-    try {
-      const { data } = await axios.get(url, {
-        headers: {
-          authorization: `Bearer ${localStorage.getItem("accessToken")}`,
-        },
-      });
-      setOrders(data);
-    } catch (error) {
-      console.log(error.message);
-      if (error.response.status === 401 || error.response.status === 403) {
-        signOut(auth);
-        navigate("/login");
-      }
-    }
-  };
 
   useEffect(() => {
-    // fetch("https://fathomless-spire-40584.herokuapp.com/order")
-    //   .then((res) => res.json())
-    //   .then((data) => setOrders(data));
-    getOrder()
+    fetch("https://fathomless-spire-40584.herokuapp.com/order")
+      .then((res) => res.json())
+      .then((data) => setOrders(data));
+    
 
   }, [user]);
+
+  const handleCencelOrder = (id) => {
+    const proceed = window.confirm(
+      "are you sure you want to delete this item?"
+    );
+    if (proceed) {
+      const url = `https://fathomless-spire-40584.herokuapp.com/order/${id}`;
+      fetch(url, {
+        method: "DELETE",
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          console.log(data);
+          const remaining = orders.filter((order) => order._id !== id);
+          setOrders(remaining);
+          toast("item deleted successfully");
+        });
+    }
+  };
 
 
   return (
@@ -50,7 +50,7 @@ const Orders = () => {
               <p>Email: {order.email}</p>
               <p>Quantity: {order.quantity}pcs</p>
               <div class="card-actions justify-center">
-                <button class="btn btn-primary">Cencel</button>
+                <button onClick={() => handleCencelOrder(order._id)} class="btn btn-primary">Cencel</button>
               </div>
             </div>
           </div>

@@ -11,6 +11,7 @@ import {toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import axios from "axios";
 import SocialLogIn from "../SocialLogIn/SocialLogIn";
+import useToken from "../../hooks/useToken";
 
 const LogIn = () => {
   const emailRef = useRef("");
@@ -39,7 +40,7 @@ const LogIn = () => {
     navigate(from, { replace: true });
   }
 
-  if (loading) {
+  if (loading || sending) {
     return <Loading></Loading>;
   }
 

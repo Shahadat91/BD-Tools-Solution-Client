@@ -19,8 +19,8 @@ import ToolsDetails from "./components/ToolsDetails/ToolsDetails";
 function App() {
   return (
     <>
+      <Header></Header>
       <div className="max-w-7xl mx-auto lg:px-12">
-        <Header></Header>
         <Routes>
           <Route path="/" element={<Home></Home>}></Route>
           <Route path="/home" element={<Home></Home>}></Route>
