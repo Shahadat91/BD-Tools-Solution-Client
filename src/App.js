@@ -2,6 +2,7 @@ import { Route, Routes } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import "./App.css";
 import AddReview from "./components/AddReview/AddReview";
+import Blogs from "./components/Blogs/Blogs";
 import Dashboard from "./components/Dashboard/Dashboard";
 import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
@@ -42,7 +43,7 @@ function App() {
             </RequireAuth>
           
           }></Route>
-          
+          <Route path="/blogs" element={<Blogs></Blogs>}></Route>
           <Route path="/reviews" element={<Reviews></Reviews>}></Route>
           <Route path="/addreview" element={<AddReview></AddReview>}></Route>
           <Route path="/order" element={<Orders></Orders>}></Route>

@@ -18,7 +18,7 @@ const logout =()=>{
         <Link to="/">Home</Link>
       </li>
       <li>
-        <Link to="/tools">Tools</Link>
+        <Link to="/blogs">Blogs</Link>
       </li>
       <li>
         <Link to="/reviews">Reviews</Link>

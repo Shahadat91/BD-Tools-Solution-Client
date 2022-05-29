@@ -10,6 +10,7 @@ import Loading from "../Loading/Loading";
 import {toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import axios from "axios";
+import SocialLogIn from "../SocialLogIn/SocialLogIn";
 
 const LogIn = () => {
   const emailRef = useRef("");
@@ -106,8 +107,7 @@ const LogIn = () => {
         </div>
       </form>
       {errorElement}
-      
-      
+      <SocialLogIn></SocialLogIn>
     </div>
   );
 };
