@@ -48,6 +48,7 @@ const Blogs = () => {
           description, etc. How will you implement a search to find products by
           name?
         </h5>
+        <p>The filter() method returns a new array of all the values in an array that matches the conditions of a function. If there is no match, the method returns an empty array. So, by using filter we can products by name.</p>
       </div>
       <div>
         <h5>Q-5: What is a unit test? Why should write unit tests?</h5>
