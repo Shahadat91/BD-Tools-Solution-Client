@@ -40,7 +40,7 @@ const ProceedOrder = () => {
         <div className='justify-center items-center text-center'>
             <h2>Proceed Your Order</h2>
             <h2>Please Order: {tool.name}</h2>
-            <form className='w-50 mx-auto text-center' onSubmit={handleProceedOrder}>
+            <form className='w-50 mx-auto text-center shadow-2xl p-8' onSubmit={handleProceedOrder}>
                 <input className='mb-3 w-100' type="text" name="name" id="" value={user?.displayName} placeholder='name' required readOnly disabled />
                 <br />
                 <input className='mb-3 w-100' type="email" name="email" id="" value={user?.email} placeholder='email' required readOnly disabled />

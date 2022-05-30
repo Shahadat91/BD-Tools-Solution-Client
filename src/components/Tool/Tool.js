@@ -15,7 +15,7 @@ const Tool = ({tool}) => {
         <div className="card-body items-center text-center">
           <h2 className="card-title">{name}</h2>
           <p>{description}</p>
-          <p>Price: {price}</p>
+          <p>Price: $ {price}</p>
           <div className="card-actions">
             <button onClick={() =>navigateToPurchaseTool(_id)} className="btn btn-primary">Buy Now</button>
           </div>

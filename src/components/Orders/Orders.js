@@ -50,7 +50,7 @@ const Orders = () => {
               <p>Email: {order.email}</p>
               <p>Quantity: {order.quantity}pcs</p>
               <div className="card-actions justify-center">
-                <button onClick={() => handleCencelOrder(order._id)} className="btn btn-primary">Cencel</button>
+                <button onClick={() => handleCencelOrder(order._id)} className="btn btn-primary">Cancel</button>
               </div>
             </div>
           </div>

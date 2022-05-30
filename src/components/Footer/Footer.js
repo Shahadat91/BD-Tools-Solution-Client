@@ -6,7 +6,7 @@ const Footer = () => {
 
   return (
     <footer className="bg-base-100">
-      <div className="p-10  max-w-7xl mx-auto lg:px-12 footer  text-base-content mt-5">
+      <div className="p-10  max-w-7xl mx-auto lg:px-12 footer  text-base-content">
         <div>
           <span className="footer-title">Services</span>
           <a className="link link-hover">Branding</a>
@@ -19,7 +19,6 @@ const Footer = () => {
           <a className="link link-hover">About us</a>
           <a className="link link-hover">Contact</a>
           <a className="link link-hover">Jobs</a>
-          
         </div>
         <div>
           <span className="footer-title">Social</span>
@@ -60,12 +59,10 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      
-         <small className="text-white">
-          Copyright &copy; {year} BD Tools Solution Rights Reserved
-        </small>
-      
-     
+
+      <small className="text-white">
+        Copyright &copy; {year} BD Tools Solution Rights Reserved
+      </small>
     </footer>
   );
 };
