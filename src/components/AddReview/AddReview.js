@@ -18,7 +18,8 @@ const AddReview = () => {
       .then((res) => res.json())
       .then((result) => {
         console.log(result);
-        toast("item added successfully");
+        toast("review added successfully");
+        
       });
   };
   return (
