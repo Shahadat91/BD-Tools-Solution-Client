@@ -6,7 +6,7 @@
 * This website is about a tools manufacturer website.
 * It has 8 section on home page.
 * Some items display on home page.
-* All items are on manage items page.
+* Customer can give review on review page.
 * Anyone can buy tools by clicking buy now button.
 
 
