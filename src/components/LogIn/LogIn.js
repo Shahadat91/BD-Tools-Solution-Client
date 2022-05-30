@@ -90,7 +90,7 @@ const LogIn = () => {
               required
             />
           </div>
-          <button className="button">Sign In</button>
+          <button className="button">Log In</button>
           <div className="link">
             <p>
               New at this site? Please{" "}

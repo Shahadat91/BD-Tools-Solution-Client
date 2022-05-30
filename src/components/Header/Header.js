@@ -49,7 +49,7 @@ const Header = () => {
           </button>
         ) : (
           <Link to="/login" className="text-white no-underline text-lg">
-            Login
+            Log In
           </Link>
         )}
       </li>

@@ -1,3 +1,27 @@
+# Project Name: BD Tools Solution
+
+## [Live Site Link](https://bd-tools-solution.web.app/)
+
+#About This Site : 
+* This website is about a tools manufacturer website.
+* It has 8 section on home page.
+* Some items display on home page.
+* All items are on manage items page.
+* Anyone can buy tools by clicking buy now button.
+
+
+#List of technologies used in this project:
+ * React Router
+ * react-firebase-hooks
+ * React hooks form
+ * React Router hook
+ * Tailwind Css
+ * DaisyUi
+ * Google Firebase
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
