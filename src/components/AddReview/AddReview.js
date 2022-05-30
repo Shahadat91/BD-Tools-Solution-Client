@@ -23,9 +23,9 @@ const AddReview = () => {
 
     }
     return (
-        <div>
-            <h2 className='text-center'>Please Add Your Review.</h2>
-            <form className='d-flex flex-column w-50 mx-auto text-center shadow-2xl' onSubmit={handleSubmit(onSubmit)}>
+        <div >
+            <h2 className='text-center my-5'>Please Add Your Review.</h2>
+            <form className='d-flex flex-column w-50 mx-auto text-center shadow-2xl p-5' onSubmit={handleSubmit(onSubmit)}>
 
       <input className='mb-3' placeholder='Name' {...register("name", { required: true, maxLength: 20 })} />
       

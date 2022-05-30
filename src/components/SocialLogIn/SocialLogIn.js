@@ -36,7 +36,7 @@ if(loading){
             </div>
             {errorElement}
             <div className='d-flex justify-content-center'>
-                <button onClick={()=> signInWithGoogle()} className='btn btn-secondary w-25'><img src={google} alt="" /> Google Sign In</button>
+                <button onClick={()=> signInWithGoogle()} className='btn btn-secondary w-25 d-flex justify-content-center'><img className='pe-3' src={google} alt="" /> Google Sign In</button>
             </div>
         </div>
     );

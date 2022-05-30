@@ -17,43 +17,54 @@ import RequireAuth from "./components/RequireAuth/RequireAuth";
 import Reviews from "./components/Reviews/Reviews";
 import ToolsDetails from "./components/ToolsDetails/ToolsDetails";
 
+const Wrap=props=> {
+  return(
+  <div className="main max-w-7xl mx-auto lg:px-12">
+    {props.children}
+  </div>
+  )
+}
+
 function App() {
   return (
     <>
       <Header></Header>
-      <div className="main max-w-7xl mx-auto lg:px-12">
         <Routes>
-          <Route path="/" element={<Home></Home>}></Route>
-          <Route path="/home" element={<Home></Home>}></Route>
+          <Route path="/" element={<Wrap><Home></Home></Wrap>}></Route>
+          <Route path="/home" element={<Wrap><Home></Home></Wrap>}></Route>
           <Route
             path="/tool/:toolId"
             element={
               <RequireAuth>
-                <ToolsDetails></ToolsDetails>
+                <Wrap>
+                  <ToolsDetails></ToolsDetails>
+                </Wrap>
+                
               </RequireAuth>
             }
           ></Route>
 
           <Route
             path="/proceedorder/:toolId"
-            element={<ProceedOrder></ProceedOrder>}
+            element={<Wrap><ProceedOrder></ProceedOrder></Wrap>}
           ></Route>
           <Route path="/dashboard" element={
             <RequireAuth>
-              <Dashboard></Dashboard>
+              <Wrap><Dashboard></Dashboard></Wrap>
             </RequireAuth>
           
           }></Route>
-          <Route path="/blogs" element={<Blogs></Blogs>}></Route>
-          <Route path="/reviews" element={<Reviews></Reviews>}></Route>
-          <Route path="/addreview" element={<AddReview></AddReview>}></Route>
+          <Route path="/blogs" element={<Wrap><Blogs></Blogs></Wrap>}></Route>
+          <Route path="/reviews" element={<Wrap><Reviews></Reviews></Wrap>}></Route>
+          <Route path="/addreview" element={<Wrap><AddReview></AddReview></Wrap>}></Route>
+
           <Route path="/portfolio" element={<MyPortfolio></MyPortfolio>}></Route>
-          <Route path="/order" element={<Orders></Orders>}></Route>
-          <Route path="/login" element={<LogIn></LogIn>}></Route>
-          <Route path="/register" element={<Register></Register>}></Route>
-          <Route path="*" element={<NotFound></NotFound>}></Route>
+          
+          <Route path="/order" element={<Wrap><Orders></Orders></Wrap>}></Route>
+          <Route path="/login" element={<Wrap><LogIn></LogIn></Wrap>}></Route>
+          <Route path="/register" element={<Wrap><Register></Register></Wrap>}></Route>
+          <Route path="*" element={<Wrap><NotFound></NotFound></Wrap>}></Route>
         </Routes>
-      </div>
       <Footer />
       <ToastContainer />
     </>
