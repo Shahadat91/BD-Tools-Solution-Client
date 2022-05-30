@@ -26,15 +26,12 @@ const Reviews = () => {
               <img className="w-12" src={review.img} alt="" />
             </div>
 
-            <div>
-
-            </div>
-
               <p>
                   {(makeStar(review.rating)||[]).map(i=> <small key={i+review._id}> <FontAwesomeIcon style={{ color: "goldenrod" }} icon={faStar} /> </small> )}
               </p>
 
             <p>{review.review}</p>
+            <p>{review.description}</p>
           </div>
         ))}
       </div>

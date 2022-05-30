@@ -8,6 +8,7 @@ import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
 import Home from "./components/Home/Home";
 import LogIn from "./components/LogIn/LogIn";
+import MyPortfolio from "./components/MyProtfolio/MyPortfolio";
 import NotFound from "./components/NotFound/NotFound";
 import Orders from "./components/Orders/Orders";
 import ProceedOrder from "./components/ProceedOrder/ProceedOrder";
@@ -20,7 +21,7 @@ function App() {
   return (
     <>
       <Header></Header>
-      <div className="max-w-7xl mx-auto lg:px-12">
+      <div className="main max-w-7xl mx-auto lg:px-12">
         <Routes>
           <Route path="/" element={<Home></Home>}></Route>
           <Route path="/home" element={<Home></Home>}></Route>
@@ -46,6 +47,7 @@ function App() {
           <Route path="/blogs" element={<Blogs></Blogs>}></Route>
           <Route path="/reviews" element={<Reviews></Reviews>}></Route>
           <Route path="/addreview" element={<AddReview></AddReview>}></Route>
+          <Route path="/portfolio" element={<MyPortfolio></MyPortfolio>}></Route>
           <Route path="/order" element={<Orders></Orders>}></Route>
           <Route path="/login" element={<LogIn></LogIn>}></Route>
           <Route path="/register" element={<Register></Register>}></Route>

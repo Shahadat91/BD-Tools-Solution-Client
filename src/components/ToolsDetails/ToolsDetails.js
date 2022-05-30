@@ -14,14 +14,14 @@ const ToolsDetails = () => {
   return (
     <div className="d-flex flex-wrap justify-center items-center">
       <h2 className="text-center w-full py-4">
-        This is Purchase Tools Page. Any One Can Purchase Here.
+        Please Proceed Your Order.
       </h2>
       <div className="card w-80 shadow-xl">
         <figure className="px-10 pt-10">
-          <img className="w-32" src={tool.img} alt="img" className="rounded-xl" />
+          <img className="w-32 rounded-xl" src={tool.img} alt="img" />
         </figure>
         <div className="card-body">
-          <h2 className="card-title">{tool.name}</h2>
+          <h2 className="card-title">Tool Name: {tool.name}</h2>
           <p>{tool.description} </p>
           <small>Price: ${tool.price}</small>
           <small>Min Quantity: {tool.minQuantity}pcs</small>

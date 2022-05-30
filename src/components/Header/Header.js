@@ -13,27 +13,32 @@ const Header = () => {
   const menuItems = (
     <>
       <li>
-        <Link to="/" className="text-white">
+        <Link to="/" className="text-white no-underline">
           Home
         </Link>
       </li>
       <li>
-        <Link to="/blogs" className="text-white">
+        <Link to="/blogs" className="text-white no-underline">
           Blogs
         </Link>
       </li>
       <li>
-        <Link to="/reviews" className="text-white">
-          Reviews
+        <Link to="/addreview" className="text-white no-underline">
+          Add Review
         </Link>
       </li>
       <li>
-        <Link to="/order" className="text-white">
+        <Link to="/order" className="text-white no-underline">
           Order
         </Link>
       </li>
       <li>
-        <Link to="/dashboard" className="text-white">
+        <Link to="/portfolio" className="text-white no-underline">
+          Portfolio
+        </Link>
+      </li>
+      <li>
+        <Link to="/dashboard" className="text-white no-underline">
           Dashboard
         </Link>
       </li>
@@ -43,7 +48,7 @@ const Header = () => {
             Log Out
           </button>
         ) : (
-          <Link to="/login" className="text-white">
+          <Link to="/login" className="text-white no-underline text-lg">
             Login
           </Link>
         )}
@@ -53,7 +58,7 @@ const Header = () => {
   return (
     
     <div className="bg-gray-600 ">
-      <div className="navbar max-w-7xl mx-auto lg:px-12">
+      <div className="navbar mx-auto lg:px-12">
         <div className="navbar-start">
           <div className="dropdown">
             <label tabIndex="0" className="btn btn-danger lg:hidden">
@@ -81,7 +86,7 @@ const Header = () => {
           </div>
           <Link
             to={"/"}
-            className="btn btn-ghost normal-case text-xl text-white"
+            className="btn btn-ghost text-xl text-white"
           >
             BD Tools Solution
           </Link>

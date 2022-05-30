@@ -24,15 +24,15 @@ const AddReview = () => {
     }
     return (
         <div>
-            <h2>Please Add Your Review.</h2>
-            <form className='d-flex flex-column' onSubmit={handleSubmit(onSubmit)}>
+            <h2 className='text-center'>Please Add Your Review.</h2>
+            <form className='d-flex flex-column w-50 mx-auto text-center shadow-2xl' onSubmit={handleSubmit(onSubmit)}>
 
       <input className='mb-3' placeholder='Name' {...register("name", { required: true, maxLength: 20 })} />
       
       <textarea className='mb-3' placeholder='Description' {...register("description", { required: true })} />
       <input className='mb-3' placeholder='Rating' type="number" {...register("rating", { required: true })} />
       <input className='mb-3' placeholder='Photo URL' type="text" {...register("img", { required: true })} />
-      <input type="submit" value="Add Review" />
+      <input className='bg-slate-900 w-50 mx-auto py-2 my-2 text-lg text-white rounded-xl' type="submit" value="Add Review" />
             </form>
         </div>
     );
