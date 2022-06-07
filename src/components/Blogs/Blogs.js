@@ -5,7 +5,7 @@ const Blogs = () => {
     <div>
       <div>
         <h5>
-          Q-1: How will you improve the performance of a React Application?
+          Q-1: How will you improve the performance of a React Application and so many?
         </h5>
         <p>
           Optimizing performance in a React application 1. Keeping component
